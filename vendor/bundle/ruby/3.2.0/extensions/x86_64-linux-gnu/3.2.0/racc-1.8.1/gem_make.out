@@ -1,0 +1,18 @@
+current directory: /home/michihirofukui/protospace-mfukui/vendor/bundle/ruby/3.2.0/gems/racc-1.8.1/ext/racc/cparse
+/usr/bin/ruby3.2 -I/usr/lib/ruby/vendor_ruby extconf.rb
+creating Makefile
+
+current directory: /home/michihirofukui/protospace-mfukui/vendor/bundle/ruby/3.2.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20260420-45212-p02qve sitelibdir\=./.gem.20260420-45212-p02qve clean
+
+current directory: /home/michihirofukui/protospace-mfukui/vendor/bundle/ruby/3.2.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20260420-45212-p02qve sitelibdir\=./.gem.20260420-45212-p02qve
+compiling cparse.c
+linking shared-object racc/cparse.so
+
+current directory: /home/michihirofukui/protospace-mfukui/vendor/bundle/ruby/3.2.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20260420-45212-p02qve sitelibdir\=./.gem.20260420-45212-p02qve install
+/usr/bin/install -c -m 0755 cparse.so ./.gem.20260420-45212-p02qve/racc
+
+current directory: /home/michihirofukui/protospace-mfukui/vendor/bundle/ruby/3.2.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20260420-45212-p02qve sitelibdir\=./.gem.20260420-45212-p02qve clean

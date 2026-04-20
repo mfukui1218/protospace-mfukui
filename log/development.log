@@ -1,0 +1,4 @@
+  [1m[35mSQL (0.8ms)[0m  [1m[35mSET search_path TO public /*application='ProtospaceMfukui'*/[0m
+  [1m[35m (322.4ms)[0m  [1m[35mCREATE DATABASE "protospace_mfukui_development" ENCODING = 'unicode' /*application='ProtospaceMfukui'*/[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mSET search_path TO public /*application='ProtospaceMfukui'*/[0m
+  [1m[35m (166.0ms)[0m  [1m[35mCREATE DATABASE "protospace_mfukui_test" ENCODING = 'unicode' /*application='ProtospaceMfukui'*/[0m
