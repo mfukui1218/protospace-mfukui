@@ -1,0 +1,15 @@
+<% if post.image.attached? %>
+  <%= image_tag post.image, width: 200 %>
+<% end %>
+<div id="<%= dom_id post %>">
+  <div>
+    <strong>Title:</strong>
+    <%= post.title %>
+  </div>
+
+  <div>
+    <strong>Content:</strong>
+    <%= post.content %>
+  </div>
+
+</div>

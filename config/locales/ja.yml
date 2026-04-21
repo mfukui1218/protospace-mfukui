@@ -1,0 +1,28 @@
+# config/locales/ja.yml ファイル作成
+ja:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            username:
+              taken: "は既に使用されています"
+              blank: "を入力してください"
+            email:
+              taken: "は既に使用されています"
+              invalid: "の形式が正しくありません"
+            password:
+              too_short: "は%{count}文字以上である必要があります"
+              blank: "を入力してください"
+    attributes:
+      user:
+        username: "ユーザー名"
+        email: "メールアドレス"
+        password: "パスワード"
+        password_confirmation: "パスワード（確認）"
+  devise:
+    registrations:
+      signed_up: "アカウント登録が完了しました"
+    sessions:
+      signed_in: "ログインしました"
+      signed_out: "ログアウトしました"
