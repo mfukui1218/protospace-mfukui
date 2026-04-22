@@ -1,19 +1,36 @@
-<p style="color: green"><%= notice %></p>
+<h1>投稿一覧</h1>
 
-<% content_for :title, "Posts" %>
-
-<h1>Posts</h1>
-
-<div id="posts">
-  <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
-  <% end %>
-</div>
-
-<div>
+<div class="actions">
   <%= link_to "New post", new_post_path %>
-  | <%= link_to "トップに戻る", root_path %>
+  |
+  <%= link_to "トップに戻る", root_path %>
 </div>
+
+<% @posts.each do |post| %>
+  <div class="post">
+    <% if post.image.attached? %>
+      <%= link_to post_path(post) do %>
+        <%= image_tag post.image, size: "300x300" %>
+      <% end %>
+    <% end %>
+    <h2>
+      タイトル：<%= link_to post.title, post_path(post) %>
+    </h2>
+    <p>キャッチコピー：<%= post.catchcopy %></p>
+    <p>内容：<%= post.content %></p>
+
+    <p>投稿者：<%= link_to post.user.username, user_path(post.user) %></p>
+    
+    
+    <% if user_signed_in? && current_user == post.user %>
+      <div class="post-actions">
+        <%= button_to "編集", edit_post_path(post), method: :get %>
+        <%= button_to "削除",
+              post_path(post),
+              method: :delete,
+              data: { turbo_confirm: "本当に削除しますか？" } %>
+
+      </div>
+    <% end %>
+  </div>
+<% end %>

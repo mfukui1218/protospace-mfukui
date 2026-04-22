@@ -1,31 +1,47 @@
 <%= form_with(model: post) do |form| %>
-  <% if post.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
 
-      <ul>
-        <% post.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-  
+  <!-- IMAGE -->
   <div class="field">
     <%= form.label :image %>
     <%= form.file_field :image %>
+
+    <% post.errors.full_messages_for(:image).each do |message| %>
+      <p class="error"><%= message %></p>
+    <% end %>
   </div>
-  <div>
+
+  <!-- TITLE -->
+  <div class="field">
     <%= form.label :title, style: "display: block" %>
     <%= form.text_field :title %>
+
+    <% post.errors.full_messages_for(:title).each do |message| %>
+      <p class="error"><%= message %></p>
+    <% end %>
   </div>
 
-  <div>
+  <!-- CONTENT -->
+  <div class="field">
     <%= form.label :content, style: "display: block" %>
     <%= form.textarea :content %>
+
+    <% post.errors.full_messages_for(:content).each do |message| %>
+      <p class="error"><%= message %></p>
+    <% end %>
   </div>
 
-  <div>
+  <!-- CATCHCOPY -->
+  <div class="field">
+    <%= form.label :catchcopy %><br>
+    <%= form.text_field :catchcopy %>
+
+    <% post.errors.full_messages_for(:catchcopy).each do |message| %>
+      <p class="error"><%= message %></p>
+    <% end %>
+  </div>
+
+  <div class="actions">
     <%= form.submit %>
   </div>
+
 <% end %>

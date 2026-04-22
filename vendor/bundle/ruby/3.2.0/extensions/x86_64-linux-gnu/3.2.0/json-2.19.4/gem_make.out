@@ -11,16 +11,16 @@ checking for cpuid.h... yes
 creating Makefile
 
 current directory: /home/michihirofukui/protospace-mfukui/vendor/bundle/ruby/3.2.0/gems/json-2.19.4/ext/json/ext/parser
-make DESTDIR\= sitearchdir\=./.gem.20260420-45212-sr1293 sitelibdir\=./.gem.20260420-45212-sr1293 clean
+make DESTDIR\= sitearchdir\=./.gem.20260422-24751-wm7rbx sitelibdir\=./.gem.20260422-24751-wm7rbx clean
 
 current directory: /home/michihirofukui/protospace-mfukui/vendor/bundle/ruby/3.2.0/gems/json-2.19.4/ext/json/ext/parser
-make DESTDIR\= sitearchdir\=./.gem.20260420-45212-sr1293 sitelibdir\=./.gem.20260420-45212-sr1293
+make DESTDIR\= sitearchdir\=./.gem.20260422-24751-wm7rbx sitelibdir\=./.gem.20260422-24751-wm7rbx
 compiling parser.c
 linking shared-object json/ext/parser.so
 
 current directory: /home/michihirofukui/protospace-mfukui/vendor/bundle/ruby/3.2.0/gems/json-2.19.4/ext/json/ext/parser
-make DESTDIR\= sitearchdir\=./.gem.20260420-45212-sr1293 sitelibdir\=./.gem.20260420-45212-sr1293 install
-/usr/bin/install -c -m 0755 parser.so ./.gem.20260420-45212-sr1293/json/ext
+make DESTDIR\= sitearchdir\=./.gem.20260422-24751-wm7rbx sitelibdir\=./.gem.20260422-24751-wm7rbx install
+/usr/bin/install -c -m 0755 parser.so ./.gem.20260422-24751-wm7rbx/json/ext
 
 current directory: /home/michihirofukui/protospace-mfukui/vendor/bundle/ruby/3.2.0/gems/json-2.19.4/ext/json/ext/parser
-make DESTDIR\= sitearchdir\=./.gem.20260420-45212-sr1293 sitelibdir\=./.gem.20260420-45212-sr1293 clean
+make DESTDIR\= sitearchdir\=./.gem.20260422-24751-wm7rbx sitelibdir\=./.gem.20260422-24751-wm7rbx clean

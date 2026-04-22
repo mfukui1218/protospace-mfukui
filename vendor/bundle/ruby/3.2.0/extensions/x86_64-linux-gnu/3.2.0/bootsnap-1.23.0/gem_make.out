@@ -8,16 +8,16 @@ checking for whether -std=c99 is accepted as CFLAGS... yes
 creating Makefile
 
 current directory: /home/michihirofukui/protospace-mfukui/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.23.0/ext/bootsnap
-make DESTDIR\= sitearchdir\=./.gem.20260420-45212-8rbcj sitelibdir\=./.gem.20260420-45212-8rbcj clean
+make DESTDIR\= sitearchdir\=./.gem.20260422-24751-dusfiv sitelibdir\=./.gem.20260422-24751-dusfiv clean
 
 current directory: /home/michihirofukui/protospace-mfukui/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.23.0/ext/bootsnap
-make DESTDIR\= sitearchdir\=./.gem.20260420-45212-8rbcj sitelibdir\=./.gem.20260420-45212-8rbcj
+make DESTDIR\= sitearchdir\=./.gem.20260422-24751-dusfiv sitelibdir\=./.gem.20260422-24751-dusfiv
 compiling bootsnap.c
 linking shared-object bootsnap/bootsnap.so
 
 current directory: /home/michihirofukui/protospace-mfukui/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.23.0/ext/bootsnap
-make DESTDIR\= sitearchdir\=./.gem.20260420-45212-8rbcj sitelibdir\=./.gem.20260420-45212-8rbcj install
-/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20260420-45212-8rbcj/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20260422-24751-dusfiv sitelibdir\=./.gem.20260422-24751-dusfiv install
+/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20260422-24751-dusfiv/bootsnap
 
 current directory: /home/michihirofukui/protospace-mfukui/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.23.0/ext/bootsnap
-make DESTDIR\= sitearchdir\=./.gem.20260420-45212-8rbcj sitelibdir\=./.gem.20260420-45212-8rbcj clean
+make DESTDIR\= sitearchdir\=./.gem.20260422-24751-dusfiv sitelibdir\=./.gem.20260422-24751-dusfiv clean

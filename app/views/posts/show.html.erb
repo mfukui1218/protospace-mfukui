@@ -1,10 +1,58 @@
-<p style="color: green"><%= notice %></p>
+<h1><%= @post.title %></h1>
 
-<%= render @post %>
+<% if @post.image.attached? %>
+  <%= image_tag @post.image, size: "300x300" %>
+<% end %>
 
-<div>
-  <%= link_to "Edit this post", edit_post_path(@post) %> |
-  <%= link_to "Back to posts", posts_path %>
+<p>キャッチコピー：<%= @post.catchcopy %></p>
+<p>内容：<%= @post.content %></p>
+<p>投稿者：<%= link_to @post.user&.username, user_path(@post.user) %></p>
 
-  <%= button_to "Destroy this post", @post, method: :delete %>
-</div>
+<hr>
+
+<!-- ★ 編集・削除（投稿者本人だけ） -->
+<% if user_signed_in? && current_user == @post.user %>
+  <%= button_to "編集", edit_post_path(@post), method: :get %>
+  <%= button_to "削除",
+                post_path(@post),
+                method: :delete,
+                data: { turbo_confirm: "本当に削除しますか？" } %>
+<% end %>
+
+<hr>
+
+<h2>コメント一覧</h2>
+
+<% @post.comments.each do |comment| %>
+  <p>
+    <strong><%= link_to comment.user.username, user_path(comment.user) %>：</strong>
+    <%= comment.text %>
+  </p>
+<% end %>
+
+<hr>
+
+<!-- ★ コメント入力欄（ログイン時のみ） -->
+<% if user_signed_in? %>
+  
+  <h3>コメントする</h3>
+  <% if @comment&.errors&.any? %>
+    <ul class="error-messages">
+      <% @comment.errors.full_messages.each do |message| %>
+        <li class="error"><%= message %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <%= form_with(model: [@post, Comment.new], local: true) do |f| %>
+    <%= f.text_area :text, rows: 3 %><br>
+    <%= f.submit "送信" %>
+  <% end %>
+<% else %>
+  <p>※ コメントするにはログインが必要です</p>
+<% end %>
+
+<hr>
+
+<%= link_to "一覧に戻る", root_path %>
+``

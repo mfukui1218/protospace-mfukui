@@ -16,16 +16,16 @@ checking for ttyname_r()... yes
 creating Makefile
 
 current directory: /home/michihirofukui/protospace-mfukui/vendor/bundle/ruby/3.2.0/gems/io-console-0.8.2/ext/io/console
-make DESTDIR\= sitearchdir\=./.gem.20260420-45212-cflc1g sitelibdir\=./.gem.20260420-45212-cflc1g clean
+make DESTDIR\= sitearchdir\=./.gem.20260422-24751-3svdj6 sitelibdir\=./.gem.20260422-24751-3svdj6 clean
 
 current directory: /home/michihirofukui/protospace-mfukui/vendor/bundle/ruby/3.2.0/gems/io-console-0.8.2/ext/io/console
-make DESTDIR\= sitearchdir\=./.gem.20260420-45212-cflc1g sitelibdir\=./.gem.20260420-45212-cflc1g
+make DESTDIR\= sitearchdir\=./.gem.20260422-24751-3svdj6 sitelibdir\=./.gem.20260422-24751-3svdj6
 compiling console.c
 linking shared-object io/console.so
 
 current directory: /home/michihirofukui/protospace-mfukui/vendor/bundle/ruby/3.2.0/gems/io-console-0.8.2/ext/io/console
-make DESTDIR\= sitearchdir\=./.gem.20260420-45212-cflc1g sitelibdir\=./.gem.20260420-45212-cflc1g install
-/usr/bin/install -c -m 0755 console.so ./.gem.20260420-45212-cflc1g/io
+make DESTDIR\= sitearchdir\=./.gem.20260422-24751-3svdj6 sitelibdir\=./.gem.20260422-24751-3svdj6 install
+/usr/bin/install -c -m 0755 console.so ./.gem.20260422-24751-3svdj6/io
 
 current directory: /home/michihirofukui/protospace-mfukui/vendor/bundle/ruby/3.2.0/gems/io-console-0.8.2/ext/io/console
-make DESTDIR\= sitearchdir\=./.gem.20260420-45212-cflc1g sitelibdir\=./.gem.20260420-45212-cflc1g clean
+make DESTDIR\= sitearchdir\=./.gem.20260422-24751-3svdj6 sitelibdir\=./.gem.20260422-24751-3svdj6 clean

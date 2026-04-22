@@ -1,0 +1,31 @@
+<h1><%= @user.username %> さんのページ</h1>
+
+<h2>プロフィール</h2>
+<p>プロフィール：<%= @user.profile %></p>
+<p>所属：<%= @user.affiliation %></p>
+<p>役職：<%= @user.position %></p>
+
+<hr>
+
+<h2><%= @user.username %> さんの投稿</h2>
+
+<% @posts.each do |post| %>
+  <div class="post">
+
+    <% if post.image.attached? %>
+      <%= link_to post_path(post) do %>
+        <%= image_tag post.image, size: "300x300" %>
+      <% end %>
+    <% end %>
+
+    <h3>
+      <%= link_to post.title, post_path(post) %>
+    </h3>
+
+    <p><%= post.catchcopy %></p>
+    <p><%= post.content %></p>
+
+  </div>
+<% end %>
+
+<%= link_to "トップに戻る", root_path %>
