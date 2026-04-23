@@ -65,3 +65,10 @@ group :test do
   gem "selenium-webdriver"
 end
 gem 'devise'
+
+group :development, :test do
+  gem 'faker'
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+end
+
