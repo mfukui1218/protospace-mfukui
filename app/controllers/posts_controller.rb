@@ -1,7 +1,12 @@
+
 class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
-  before_action :move_to_index, only: [:edit, :update, :destroy]
+
+  # 誰でもOK
+  before_action :set_post, only: [:show]
+
+  # 本人のみOK
+  before_action :set_own_post, only: [:edit, :update, :destroy]
 
   def index
     @posts = Post.all
@@ -44,9 +49,10 @@ class PostsController < ApplicationController
   def set_post
     @post = Post.find(params[:id])
   end
-
-  def move_to_index
-    redirect_to root_path unless current_user == @post.user
+  
+  def set_own_post
+    @post = current_user.posts.find_by(id: params[:id])
+    redirect_to root_path if @post.nil?
   end
 
   def post_params
