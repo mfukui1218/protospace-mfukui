@@ -13551,3 +13551,57 @@ Processing by ActiveStorage::DiskController#show as PNG
 Completed 200 OK in 3ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/" for ::1 at 2026-04-23 13:34:57 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='ProtospaceMfukui'*/[0m
+Processing by PostsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (9.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" /*action='index',application='ProtospaceMfukui',controller='posts'*/[0m
+  ↳ app/views/posts/index.html.erb:10
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 5 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ProtospaceMfukui',controller='posts'*/[0m
+  ↳ app/views/posts/index.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 2 LIMIT 1 /*action='index',application='ProtospaceMfukui',controller='posts'*/[0m
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1 /*action='index',application='ProtospaceMfukui',controller='posts'*/[0m
+  ↳ app/views/posts/index.html.erb:23
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = 10 AND "active_storage_attachments"."record_type" = 'Post' AND "active_storage_attachments"."name" = 'image' LIMIT 1 /*action='index',application='ProtospaceMfukui',controller='posts'*/[0m
+  ↳ app/views/posts/index.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 6 LIMIT 1 /*action='index',application='ProtospaceMfukui',controller='posts'*/[0m
+  ↳ app/views/posts/index.html.erb:14
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='index',application='ProtospaceMfukui',controller='posts'*/[0m
+  ↳ app/views/posts/index.html.erb:23
+  Rendered posts/index.html.erb within layouts/application (Duration: 67.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 71.9ms | GC: 0.0ms)
+Completed 200 OK in 307ms (Views: 51.3ms | ActiveRecord: 24.0ms (7 queries, 0 cached) | GC: 52.7ms)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MiwicHVyIjoiYmxvYl9pZCJ9fQ==--861858dd15dad1e508b2ffdc1d150da9e9991f3b/9550-480x480.png" for ::1 at 2026-04-23 13:34:57 +0900
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6MiwicHVyIjoiYmxvYl9pZCJ9fQ==--861858dd15dad1e508b2ffdc1d150da9e9991f3b", "filename"=>"9550-480x480"}
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6NiwicHVyIjoiYmxvYl9pZCJ9fQ==--697bb69f9e63d9cff01047dada755c0e12750cb1/9550-480x480.png" for ::1 at 2026-04-23 13:34:57 +0900
+  [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 2 LIMIT 1 /*action='show',application='ProtospaceMfukui',controller='redirect'*/[0m
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: aci5klp2j7s3m0uzn3ew7z8aukjh (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJhY2k1a2xwMmo3czNtMHV6bjNldzd6OGF1a2poIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiOTU1MC00ODB4NDgwLnBuZ1wiOyBmaWxlbmFtZSo9VVRGLTgnJzk1NTAtNDgweDQ4MC5wbmciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9wbmciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI2LTA0LTIzVDA0OjM5OjU3LjcwNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--b6ee70069be8e6ec5d73cb1e9add98f95f2118af/9550-480x480.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJhY2k1a2xwMmo3czNtMHV6bjNldzd6OGF1a2poIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiOTU1MC00ODB4NDgwLnBuZ1wiOyBmaWxlbmFtZSo9VVRGLTgnJzk1NTAtNDgweDQ4MC5wbmciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9wbmciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI2LTA0LTIzVDA0OjM5OjU3LjcwNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--b6ee70069be8e6ec5d73cb1e9add98f95f2118af/9550-480x480.png
+Completed 302 Found in 14ms (ActiveRecord: 1.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6NiwicHVyIjoiYmxvYl9pZCJ9fQ==--697bb69f9e63d9cff01047dada755c0e12750cb1", "filename"=>"9550-480x480"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = 6 LIMIT 1 /*action='show',application='ProtospaceMfukui',controller='redirect'*/[0m
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: vb7lmda1kyu08ixa8o6jp2bwqyzs (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJ2YjdsbWRhMWt5dTA4aXhhOG82anAyYndxeXpzIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiOTU1MC00ODB4NDgwLnBuZ1wiOyBmaWxlbmFtZSo9VVRGLTgnJzk1NTAtNDgweDQ4MC5wbmciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9wbmciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI2LTA0LTIzVDA0OjM5OjU3LjcxMVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--077188c31422e3ad54ba47b53cc4d217b2415795/9550-480x480.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJ2YjdsbWRhMWt5dTA4aXhhOG82anAyYndxeXpzIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiOTU1MC00ODB4NDgwLnBuZ1wiOyBmaWxlbmFtZSo9VVRGLTgnJzk1NTAtNDgweDQ4MC5wbmciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9wbmciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI2LTA0LTIzVDA0OjM5OjU3LjcxMVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--077188c31422e3ad54ba47b53cc4d217b2415795/9550-480x480.png
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJhY2k1a2xwMmo3czNtMHV6bjNldzd6OGF1a2poIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiOTU1MC00ODB4NDgwLnBuZ1wiOyBmaWxlbmFtZSo9VVRGLTgnJzk1NTAtNDgweDQ4MC5wbmciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9wbmciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI2LTA0LTIzVDA0OjM5OjU3LjcwNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--b6ee70069be8e6ec5d73cb1e9add98f95f2118af/9550-480x480.png" for ::1 at 2026-04-23 13:34:57 +0900
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"9550-480x480"}
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJ2YjdsbWRhMWt5dTA4aXhhOG82anAyYndxeXpzIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwiOTU1MC00ODB4NDgwLnBuZ1wiOyBmaWxlbmFtZSo9VVRGLTgnJzk1NTAtNDgweDQ4MC5wbmciLCJjb250ZW50X3R5cGUiOiJpbWFnZS9wbmciLCJzZXJ2aWNlX25hbWUiOiJsb2NhbCJ9LCJleHAiOiIyMDI2LTA0LTIzVDA0OjM5OjU3LjcxMVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--077188c31422e3ad54ba47b53cc4d217b2415795/9550-480x480.png" for ::1 at 2026-04-23 13:34:57 +0900
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"9550-480x480"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+

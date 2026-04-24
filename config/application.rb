@@ -15,9 +15,7 @@ module ProtospaceMfukui
     # ✅ Render Free + Docker 対策（最重要）
     # Rails起動の最初に secret_key_base を必ず用意する
     # ==========================================
-    if ENV["SECRET_KEY_BASE"].blank?
-      ENV["SECRET_KEY_BASE"] = "dummy_secret_key_base_for_render"
-    end
+    config.secret_key_base = ENV.fetch("SECRET_KEY_BASE")
 
     # ------------------------------------------
     # Application configuration
